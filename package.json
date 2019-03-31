@@ -24,6 +24,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "transpile": "node_modules/@babel/cli/bin/babel.js src/index.js src/node.js src/common.js src/browser.js -d es2015 --plugins @babel/plugin-proposal-object-rest-spread --presets @babel/preset-env",
     "lint": "xo",
     "test": "npm run test:node && npm run test:browser",
     "test:node": "istanbul cover _mocha -- test.js",
@@ -44,8 +45,12 @@
     "karma-mocha": "^1.3.0",
     "mocha": "^5.2.0",
     "mocha-lcov-reporter": "^1.2.0",
-    "xo": "^0.23.0"
+    "xo": "^0.23.0",
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.0"
   },
-  "main": "./src/index.js",
+  "main": "./es2015/index.js",
   "browser": "./src/browser.js"
 }
