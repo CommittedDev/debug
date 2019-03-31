@@ -14,7 +14,8 @@
   "files": [
     "src",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "es2015"
   ],
   "author": "TJ Holowaychuk <tj@vision-media.ca>",
   "contributors": [
